@@ -1,0 +1,544 @@
+h1, h2, a, li, span, div, button, input, p{
+  font-family: arial;
+}
+
+a{
+  text-decoration:none;
+  color: grey;
+}
+
+p{
+  color: grey;
+}
+
+li{
+  list-style: none;
+}
+
+img{
+  display: block;
+}
+
+/* Header container */
+.social-media-link{
+  display: none;
+  float: right;
+}
+
+.header-burger-icon{
+  line-height: 29px;
+  color: white;
+  font-size: 20px;
+  margin: 0 1px;
+  padding: 0 10px;
+  background-image:url(./../images/header-background-color.png)
+}
+
+
+/* page logo image */
+.logo-image{
+  float: left;
+  padding-top:10px;
+}
+
+/* right social media icons */
+.header-icon{
+  color: white;
+}
+
+
+/* Sign up container */
+.sign-up-text{
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 30px;
+  color: white;
+}
+
+.sign-up-wrapper form{
+  display: block;
+}
+
+/* blog-wrapper */
+.blog-content-wrapper span{
+  text-align: center;
+  display: block;
+}
+
+.blog-type{
+  color:#b9b9ba;
+  font-size: 10px;
+  line-height: 30px;
+}
+
+.blog-title{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.author-date-wrapper{
+  text-align: center;
+  align-content: center;
+}
+
+.author-date-wrapper ul li i{
+  padding: 0 4px;
+  font-size: 10px;
+  display:inline;
+}
+
+.author-date-wrapper ul{
+  display: inline-block;
+  margin:15px 0;
+}
+.author-date-wrapper ul li{
+  color:#b9b9ba;
+  float: left;
+  padding-right: 15px;
+  font-size: 10px;
+}
+
+.author-date-wrapper ul > :first-child{
+  padding-left: 0px;
+}
+
+.blog-description-para{
+  font-size: 10px;
+  justify-content: center;
+  text-align: justify;
+}
+
+.read-more-btn{
+  color:grey;
+  font-size: 10px;
+  text-align:center;
+  padding: 0 12px;
+  line-height:16px;
+  margin-top: 24px;
+  border-width: 0 2px;
+  border-style: solid;
+  border-color: #e8e8e9;
+}
+
+/* like, comment and share*/
+
+.like-comment-wrapper li, .share-media-wrapper li, .share-media-options li, .share-blog{
+  font-size: 10px;
+  float: left;
+  line-height: 44px;
+}
+.share-blog{
+  float: right
+}
+
+.share-blog i{
+  margin-right: 5px;
+}
+
+
+
+.share-media-wrapper li:hover a i, .like-comment-wrapper li:hover a,
+.share-blog:hover a, .share-media-options:hover a{
+  color: black;
+}
+
+.share-blog{
+  position: relative;
+  display: inline-block;
+}
+
+.share-blog:hover{
+}
+
+.share-blog:hover .share-media-options{
+  display: block;
+
+}
+
+.share-media-options{
+  display:none;
+  position: absolute;
+  z-index: 5;
+}
+
+.share-media-options li a{
+  display: block
+}
+
+.share-blog:hover > .share-media-options{
+  display: block;
+  background-color: #fcfcfc;
+}
+
+.share-media-options li a{
+  text-align:center;
+}
+
+.share-media-options li:hover{
+
+  background-color: #dcdcdc;
+}
+
+.share-media-options li:hover a i{
+  color: #202328;
+}
+
+
+
+.like-comment-wrapper li{
+  color:#b9b9ba;
+  padding-right:10px;
+}
+
+.like-comment-wrapper li i{
+  padding: 0px 6px;
+}
+
+
+
+.share-media-wrapper li{
+  font-size: 10px;
+  padding: 0 9px;
+  color: #454545;
+}
+
+.share-media-options{
+  width: 100px;
+}
+
+.share-media-options li{
+  float: left;
+  display: inline-block;
+  width: 25%;
+}
+
+/* image grid */
+
+/* quotes */
+.quotes-wrapper p{
+  font-size: 11px;
+  text-align: justify;
+}
+
+.quote-writter, .webpage-url{
+  color: #7a7c7b;
+  display:block;
+  font-size: 10px;
+  text-align: center;
+}
+
+.quote-writter{
+  margin-top: 30px;
+}
+
+
+.video-options ul li{
+  font-size: 14px;
+  color:white;
+  margin-bottom: 2px;
+  background: #101918;
+  line-height:22px;
+  padding: 0 4px;
+}
+
+.current-song-info li{
+  background: #242424;
+  font-size: 10px;
+  line-height: 16px;
+  padding: 0 5px;
+}
+
+.current-song-info >:first-child{
+  background: #9a9a9a;
+
+}
+
+.music-share-text{
+  font-size: 10px;
+  color: white;
+}
+
+.music-share-wrapper li i{
+  padding: 0 8px;
+}
+
+.share-icon{
+  padding: 0 12px;
+}
+
+.cookie-policy{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 10px;
+  color: #9f8e94;
+  background-color: #f2f2f2;
+  padding: 3px;
+}
+
+.website-name{
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  display: block;
+  line-height: 30px;
+}
+
+
+.webpage-url a{
+  color: white;
+}
+
+.category-wrapper .title, .latest-post-wrapper .title{
+  font-size: 12px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.category-wrapper ul li{
+  font-size: 10px;
+}
+
+.category-wrapper ul li:hover, .latest-post-wrapper ul li:hover{
+  background-color:#fcfcfc;
+}
+
+.category-wrapper ul li:hover a, .latest-post-wrapper ul li:hover a{
+  color:black
+}
+
+.category-wrapper .title, .category-wrapper ul li,
+.latest-post-wrapper .title, .latest-post-wrapper ul li{
+  background-image: url(./../images/categories-border.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.latest-post-wrapper ul li{
+  padding: 15px 0;
+}
+
+.category-name, .category-count{
+  font-size: 8px;
+}
+
+.category-name{
+  float: left;
+}
+
+.category-count{
+  float: right
+}
+
+.post-details-wrapper{
+  float: left;
+  line-height:0px;
+  width: 69.0886%;
+  margin-left: 5px;
+}
+
+.post-detail-title{
+  color:#585858;
+  line-height: 10px;
+  font-size: 8px;
+}
+
+.post-date-likes p{
+  font-size: 6px;
+  line-height: 8px;
+  margin-top: 6px;
+}
+
+.post-date-likes p span{
+  margin-right: 13px;
+}
+
+.social-media-wrapper ul li{
+  float: left;
+  font-size: 10px;
+  margin-left: 25px
+}
+
+.social-media-wrapper ul > :first-child{
+  margin-left: 0px
+}
+
+.right-slider-btn, .left-slider-btn{
+  position:absolute;
+  background-color: #454545;
+  top: 50px;
+}
+
+.right-slider-btn{
+  right: 0px;
+}
+
+.left-slider-btn{
+  left: 0px;
+}
+
+.right-slider-btn i, .left-slider-btn i{
+  color: white;
+  line-height: 19px;
+  padding:0 3px;
+}
+
+.inner-footer-title{
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+  display: block;
+  font-size: 12px;
+}
+
+.footer-nav-info{
+  display: none;
+}
+
+@media(min-width: 376px){
+  /* Header container */
+  .social-media-link{
+    display: inline-block;
+  }
+
+  .social-media-link li{
+    float: left;
+    width: 29px;
+    background-image: url(./../images/header-background-color.png);
+    background-repeat: repeat-x;
+    background-position: right;
+    font-size: 8px;
+    text-align: center;
+    margin:0 1px 0 0;
+  }
+
+  .social-media-link li:hover, .header-burger-icon:hover{
+    background-image:none;
+    background-color: #efefef;
+  }
+
+  .social-media-link > li:hover a i, .header-burger-icon:hover i{
+    color: #212429;
+  }
+
+
+  .social-media-link >:first-child{
+    margin-left: 1px;
+  }
+
+  .social-media-link{
+    background-position: right;
+  }
+
+  .sign-up-text{
+    line-height: 30px;
+    float: left;
+    color: #3c3c3c;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+}
+
+
+@media(min-width:768px){
+
+  /* Sign up container */
+
+  .sign-up-text{
+    padding-left: 0px;
+    line-height: 16px;
+    width: 16.8994%;
+    text-align: left;
+  }
+
+  .sign-up-wrapper form{
+    display: inline-block;
+  }
+
+  .share-blog{
+    display: none;
+  }
+
+
+  .footer-nav-info{
+    display: block;
+  }
+
+  .inner-footer-title, .footer-inner-wrapper p{
+    display: block;
+    line-height: 14px;
+    font-size: 10px;
+    color: white;
+  }
+
+  .footer-inner-wrapper ul{
+    display: block;
+  }
+
+
+  .inner-footer-title{
+    text-align: left;
+  }
+
+  .footer-tweets-list li{
+    line-height: 0px;
+    margin-top:13px;
+  }
+
+  footer a{
+    color: white;
+  }
+
+  .footer-tweets-list > :first-child{
+    margin-top:0px;
+  }
+
+  .footer-tweets-list li span, .footer-tweets-list li p{
+    font-size: 8px;
+    color: white;
+  }
+
+  .footer-tweets-list li span{
+    line-height: 20px;
+  }
+
+  .footer-tweets-list li p{
+    padding-left: 10px;
+  }
+
+  .instagram-images-list li{
+    margin-top: 1px;
+    margin-left: 1px;
+    float: left;
+  }
+
+  .instagram-images-list{
+    padding-bottom: 1px;
+    background-color: #7c7e82;
+    margin-top: 10px;
+  }
+
+  .latest-comment-list li{
+    background-image:url(./../images/latest-comment-background.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    font-size: 8px;
+    padding: 10px 0;
+    color:white;
+  }
+
+  .latest-comment-list > :first-child{
+    background-image: none;
+  }
+
+  .latest-comment-list p{
+    margin-top:5px;
+    font-size: 8px;
+  }
+}
