@@ -21,7 +21,7 @@
       </div>
       <div class = "right-wrapper">
         <div class = "logo-image">
-          <img src = "./images/page-icon.png">
+          <img src = "./images/page-icon.png" alt = "page-icon" width = 100% height = 100%>
         </div>
         <ul class = "social-media-link">
           <li><a href = "#"><i class="fas fa-wifi header-icon"></i></a></li>
@@ -36,19 +36,36 @@
   <div class = "banner-wrapper">
     <div class="container">
       <div class = "banner">
-        <img src = "./images/banner-image-1.png" width= 100% height=100%/>
+        <div class = "carousel">
+          <div class = "wrapper">
+            <img src="./images/slider_1/health_1.jpg" alt="Health images"/>
+            <img src="./images/slider_1/health_2.jpg" alt="Health images"/>
+            <img src="./images/slider_1/health_3.png" alt="Health images"/>
+            <img src="./images/slider_1/health_4.jpg" alt="Health images"/>
+            <img src="./images/slider_1/health_5.jpg" alt="Health images"/>
+          </div>
+          <div class = "slider-container">
+            <ul class = "slider-indicator">
+            </ul>
+            <ul class = "slider-controller">
+              <li><button class = "slider_1_left_btn"><i class="fas fa-arrow-left"></i></button></li>
+              <li><span class = "featured-article">FEATURED ARTICLE</span></li>
+              <li><button class = "slider_1_right_btn"><i class="fas fa-arrow-right"></i></button></li>
+            </ul>
+          </div>
+        </div>
       </div>
-
       <div class = "sign-up-wrapper">
         <span class = "sign-up-text">
           SIGN UP TO NEWSLETTER
         </span>
-        <form action="#" method = "post">
+        <form method = "post" id = "signUpForm">
           <input type = "text" name = "name" placeholder = "Your Name" class = "name-input"/>
           <input type = "email" name = "email" placeholder = "Your Email Address" class = "name-input"/>
           <input type = "submit" value = "SUBSCRIBE"></input>
         </form>
       </div>
+
     </div>
   </div>
   <main>
@@ -65,13 +82,13 @@
 
           <div class = "blog-wrapper">
             <div class = "top-icon-wrapper">
-              <img src = "./images/top-image-icon.png" width = 100% height = 100%/>
+              <i class="fab fa-pinterest-p"></i>
             </div>
             <div class = "blog-image-wrapper">
-              <img src = "./images/travel.png" height= 100% width = 100%/>
+              <img src = "./images/travel.png" height= 100% width = 100% alt='travel-img'/>
             </div>
             <div class = "bottom-icon-wrapper">
-              <img src = "./images/bottom-image-icon.png" width = 100% height = 100%/>
+              <i class="far fa-image"></i>
             </div>
             <div class = "blog-content-wrapper">
               <span class="blog-type">TRAVELLING</span>
@@ -120,35 +137,32 @@
           </div>
 
           <div class = "blog-wrapper">
-            <div class = "top-icon-wrapper">
-              <img src = "./images/top-image-icon.png" width = 100% height = 100%/>
-            </div>
             <div class = "img-3-right">
               <div class = "img-left">
                 <div class = "img-left-l">
                   <div class = "half-image">
-                    <img src = "./images/grid-1.png" width=100% height=100%>
+                    <img src = "./images/grid-1.png" width=100% height=100% alt = "grid-1">
                   </div>
                   <div class = "half-image">
-                    <img src = "./images/grid-2.png" width=100% height=100%>
+                    <img src = "./images/grid-2.png" width=100% height=100% alt="grid-2">
                   </div>
                 </div>
                 <div class = "img-left-r">
-                  <img src = "./images/grid-3.png" width=100% height=100%>
+                  <img src = "./images/grid-3.png" width=100% height=100% alt="grid-3">
                 </div>
               </div>
               <div class = "img-right">
                 <div class = "half-image">
-                  <img src = "./images/grid-4.png" width=100% height=100%>
+                  <img src = "./images/grid-4.png" width=100% height=100% alt= "grid-4">
                 </div>
                 <div class = "half-image">
-                  <img src = "./images/grid-5.png" width=100% height=100%>
+                  <img src = "./images/grid-5.png" width=100% height=100% alt="grid-5">
                 </div>
               </div>
             </div>
-            <span class = "img-btm-icon-wrapper">
-              <img src = "./images/bottom-image-icon.png" width = 100% height = 100%/>
-            </span>
+            <div class = "img-btm-icon-wrapper">
+              <i class="far fa-image"></i>
+            </div>
             <div class = "blog-content-wrapper">
               <span class="blog-type">FASHION & ADVENTURE</span>
               <span class = "blog-title">FASHION AND ADVENTURE IN THE WORLD</span>
@@ -197,7 +211,7 @@
 
           <div class = "quotes-wrapper">
             <div class = "quote-image-wrapper">
-              <img src = "./images/quote-icon.png"/>
+              <i class="fas fa-quote-left"></i>
             </div>
             <p>
                 ITS ABOUT HAVING AN ACTIVE LIFESTYLES, STAYING OF'SHEALTHY POWERS, AND MAKING THE
@@ -210,7 +224,7 @@
           </div>
 
           <div class = "blog-wrapper">
-            
+
             <div class = "video-wrapper">
               <video width=100% height=100% controls>
                 <source src="movie.mp4" type="video/mp4">
@@ -225,7 +239,7 @@
               </div>
             </div>
             <div class = "bottom-icon-wrapper">
-              <img src = "./images/bottom-image-icon.png" width = 100% height = 100%/>
+              <i class="far fa-image"></i>
             </div>
             <div class = "blog-content-wrapper">
               <span class="blog-type">TRAVELLING</span>
@@ -300,7 +314,7 @@
 
             <div class = "blog-content-wrapper">
               <div class = "pen-icon-wrapper">
-                <img src = "./images/bottom-image-icon.png" width = 100% height = 100%/>
+                <i class="fas fa-pen"></i>
               </div>
               <span class="blog-type">LIFESTYLE</span>
               <span class = "blog-title">
@@ -358,7 +372,7 @@
 
           <div class = "quotes-wrapper">
             <div class = "quote-image-wrapper">
-              <img src = "./images/quote-icon.png"/>
+              <i class="fas fa-quote-left"></i>
             </div>
             <span class = "webpage-url">
               <span class = "website-name">FREEBRANDERS.COM</span>
@@ -375,7 +389,7 @@
             </button>
           </div>
           <div class = "top-add-banner">
-            <img src = "./images/top-add-banner.png" width = 100% height = 100%/>
+            <img src = "./images/top-add-banner.png" width = 100% height = 100% alt = "first-ad-banner"/>
           </div>
           <div class = "category-wrapper">
             <span class = "title">CATEGORIES</span>
@@ -425,7 +439,7 @@
             </ul>
           </div>
           <div class= "second-add-banner">
-            <img src ="./images/second-ad-baner.png" width = 100% height = 100%/>
+            <img src ="./images/second-ad-baner.png" width = 100% height = 100% alt = 'second-add-banner'/>
           </div>
           <div class = "latest-post-wrapper">
             <span class ="title">LATEST POST</span>
@@ -433,7 +447,7 @@
               <li>
                 <a href = "#">
                   <div class = "post-img-wrapper">
-                    <img src = "./images/post-1.png" height = 100% width =100%/>
+                    <img src = "./images/post-1.png" height = 100% width =100% alt = "post-1"/>
                   </div>
                   <div class = "post-details-wrapper">
                     <span class = "post-detail-title">
@@ -456,7 +470,7 @@
               <li>
                 <a href = "#">
                   <div class = "post-img-wrapper">
-                    <img src = "./images/post-2.png" height = 100% width =100%/>
+                    <img src = "./images/post-2.png" height = 100% width =100% alt = "post-2"/>
                   </div>
                   <div class = "post-details-wrapper">
                     <span class = "post-detail-title">
@@ -479,7 +493,7 @@
               <li>
                 <a href = "#">
                   <div class = "post-img-wrapper">
-                    <img src = "./images/post-3.png" height = 100% width =100%/>
+                    <img src = "./images/post-3.png" height = 100% width =100% alt = "post-3"/>
                   </div>
                   <div class = "post-details-wrapper">
                     <span class = "post-detail-title">
@@ -502,7 +516,7 @@
               <li>
                 <a href = "#">
                   <div class = "post-img-wrapper">
-                    <img src = "./images/post-4.png" height = 100% width =100%/>
+                    <img src = "./images/post-4.png" height = 100% width =100% alt="post-4"/>
                   </div>
                   <div class = "post-details-wrapper">
                     <span class = "post-detail-title">
@@ -526,129 +540,143 @@
 
           <div class ="social-media-wrapper">
             <ul>
-              <li><i class="fas fa-wifi"></i></li>
-              <li><i class="fab fa-twitter"></i></li>
-              <li><i class="fab fa-tumblr"></i></li>
-              <li><i class="fab fa-facebook-f"></i></li>
-              <li><i class="fas fa-search"></i></li>
+              <li><a href = "#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href = "#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href = "#"><i class="fas fa-basketball-ball"></i></a></li>
+              <li><a href = "#"><i class="fab fa-pinterest"></i></a></li>
+              <li><a href = "#"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
 
           <div class = "slider-wrapper">
             <div class = "slider-image-wrapper">
+              <div class = "carousel">
+                <div class = "wrapper">
+                  <img src="./images/slider_2/img-1.jpeg" alt="Bike images"/>
+                  <img src="./images/slider_2/img-2.jpeg" alt="Bike images"/>
+                  <img src="./images/slider_2/img-3.jpg" alt="Bike images"/>
+                  <img src="./images/slider_2/img-4.jpg" alt="Bike images"/>
+                  <img src="./images/slider_2/img-5.jpg" alt="Bike images"/>
+                </div>
+              </div>
+
+              <span class = "slide_2_right-slider-btn">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+
+              <span class = "slide_2_left-slider-btn">
+                <i class="fas fa-arrow-left"></i>
+              </span>
+
             </div>
-            <span class = "right-slider-btn">
-              <i class="fas fa-arrow-right"></i>
-            </span>
-            <span class = "left-slider-btn">
-              <i class="fas fa-arrow-left"></i>
-            </span>
+
+
+
           </div>
           <div class = "facebook-wrapper">
+            <img src = "./images/facebook-api-img.png" height=100% width=100% alt = "facebook-api"/>
           </div>
         </div>
       </div>
     </div>
   </main>
   <footer>
-    <div class = "container">
       <div class = "upper-footer-wrapper">
-        <div class = "footer-inner-wrapper">
-          <a href = "#">
-            <span class ="inner-footer-title">
-              ABOUT BLOG
-            </span>
-          </a>
-          <div class = "footer-nav-info">
-            <p>
-              It is a long established fact that a reader will be distracted
-            </p>
-            <div class = "signature-wrapper">
-              <img src = "./images/signeture-image.png" width= 100% height = 100%/>
+        <div class = "container">
+          <div class = "footer-inner-wrapper">
+            <a href = "#">
+              <span class ="inner-footer-title">
+                ABOUT BLOG
+              </span>
+            </a>
+            <div class = "footer-nav-info">
+              <p>
+                It is a long established fact that a reader will be distracted
+                that a reader will be distracted
+              </p>
+              <div class = "signature-wrapper">
+                <img src = "./images/signeture-image.png" width= 100% height = 100%/>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class = "footer-inner-wrapper">
-          <a href = "#">
-            <span class ="inner-footer-title">
-              LATEST TWEETS
-            </span>
-          </a>
-          <div class = "footer-nav-info">
-            <ul class = "footer-tweets-list">
-              <li>
-                <span class = "tweet-tag">
-                  <a href = "#">
-                    <i class="fab fa-twitter header-icon"></i>
-                    @ Twitter@magicalbekah
-                  </a>
-                </span>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable
-                  content
-                </p>
-              </li>
+          <div class = "footer-inner-wrapper">
+            <a href = "#">
+              <span class ="inner-footer-title">
+                LATEST TWEETS
+              </span>
+            </a>
+            <div class = "footer-nav-info">
+              <ul class = "footer-tweets-list">
+                <li>
+                  <span class = "tweet-tag">
+                    <a href = "#">
+                      <i class="fab fa-twitter header-icon"></i>
+                      @ Twitter@magicalbekah
+                    </a>
+                  </span>
+                  <p>
+                    It is a long established fact that a reader will be distracted by the readable
+                    content
+                  </p>
+                </li>
 
-              <li>
-                <span class = "tweet-tag">
-                  <a href = "#">
-                    <i class="fab fa-twitter header-icon"></i>
-                    @ Twitter@magicalbekah
-                  </a>
-                </span>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable
-                  content
-                </p>
-              </li>
-            </ul>
+                <li>
+                  <span class = "tweet-tag">
+                    <a href = "#">
+                      <i class="fab fa-twitter header-icon"></i>
+                      @ Twitter@magicalbekah
+                    </a>
+                  </span>
+                  <p>
+                    It is a long established fact that a reader will be distracted by the readable
+                    content
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class = "footer-inner-wrapper">
-          <a href = "#">
-            <span class ="inner-footer-title">
-              FOLLOW ME INSTAGRAM
-            </span>
-          </a>
-          <div class = "footer-nav-info">
-            <ul class = "instagram-images-list">
-              <li>
-                <div class = "instagram-image-wrapper">
-                  <img src = "./images/insta-1.png" width= 100% height=100%/>
-                </div>
-              </li>
-              <li>
-                <div class = "instagram-image-wrapper">
-                  <img src = "./images/insta2.png" width= 100% height=100%/>
-                </div>
-              </li>
-              <li>
-                <div class = "instagram-image-wrapper">
-                  <img src = "./images/insta-3.png" width= 100% height=100%/>
-                </div>
-              </li>
-              <li>
-                <div class = "instagram-image-wrapper">
-                  <img src = "./images/insta-4.png" width= 100% height=100%/>
-                </div>
-              </li>
-              <li>
-                <div class = "instagram-image-wrapper">
-                  <img src = "./images/insta-5.png" width= 100% height=100%/>
-                </div>
-              </li>
-              <li>
-                <div class = "instagram-image-wrapper">
-                  <img src = "./images/insta-6.png" width= 100% height=100%/>
-                </div>
-              </li>
-            </ul>
+          <div class = "footer-inner-wrapper">
+            <a href = "#">
+              <span class ="inner-footer-title">
+                FOLLOW ME INSTAGRAM
+              </span>
+            </a>
+            <div class = "footer-nav-info">
+              <ul class = "instagram-images-list">
+                <li>
+                  <div class = "instagram-image-wrapper">
+                    <img src = "./images/insta-3.png" width= 100% height=100% alt="insta-1"/>
+                  </div>
+                </li><li>
+                  <div class = "instagram-image-wrapper">
+                    <img src = "./images/insta-3.png" width= 100% height=100% alt="insta-1"/>
+                  </div>
+                </li>
+                <li>
+                  <div class = "instagram-image-wrapper">
+                    <img src = "./images/insta-3.png" width= 100% height=100% alt="insta-1"/>
+                  </div>
+                </li>
+                <li>
+                  <div class = "instagram-image-wrapper">
+                    <img src = "./images/insta-3.png" width= 100% height=100% alt="insta-1"/>
+                  </div>
+                </li><li>
+                  <div class = "instagram-image-wrapper">
+                    <img src = "./images/insta-3.png" width= 100% height=100% alt="insta-1"/>
+                  </div>
+                </li><li>
+                  <div class = "instagram-image-wrapper">
+                    <img src = "./images/insta-3.png" width= 100% height=100% alt="insta-1"/>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class = "footer-inner-wrapper">
+          <div class = "footer-inner-wrapper">
           <a href = "#">
             <span class ="inner-footer-title">
               LATEST COMMENT
@@ -678,9 +706,21 @@
             </ul>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+      <div class = "bottom-footer-wrapper">
+        <div class = "container">
+          <ul>
+            <li>
+              &copy; COPYRIGHT .ALL RIGHTS RESERVED BY AWESOME THEME
+            </li>
+            <li><a href = "#">TERMS POLICY</a></li>
+            <li><a href = "#">DISCLAIMER</a></li>
+          </ul>
+      </div>
+      </div>
   </footer>
 
+<script src = "./js/slider.js"></script>
 </body>
 </html>
