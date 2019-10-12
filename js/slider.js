@@ -147,7 +147,7 @@ function Indicator(parentElement, indicatorCount){
     }
   }
 
-  this.initializeIndicators = function(){
+  this.initializeIndicators = function(sliderType){
     for(var pos = 0; pos < indicatorCount; pos++){
       var indicatorList = document.createElement('li');
       indicatorList.style.width = '20px';
@@ -156,6 +156,11 @@ function Indicator(parentElement, indicatorCount){
       this.checkActiveIndex(indicatorList, pos)
       this.indicator.appendChild(indicatorList)
     }
+    console.log('type : ', sliderType)
+    if(sliderType ==='vertical'){
+      this.indicator.style.transform = 'rotate(180deg)'
+    }
+
   }
 
   this.updateIndicators = function(){
@@ -296,12 +301,12 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
 
   this.setDefaultIndicator = function(){
     this.indicator.init()
-    this.indicator.initializeIndicators();
+    this.indicator.initializeIndicators(this.sliderType);
   }
 
   this.setIndicatorClass = function(activeClass, inActiveClass){
     this.indicator.setIndicatorClass(activeClass, inActiveClass)
-    this.indicator.initializeIndicators();
+    this.indicator.initializeIndicators(this.sliderType);
   }
 
   this.setSliderType = function(type){
@@ -321,22 +326,33 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
 
     var newIndex = Array.from(this.indicator.getElement().children).indexOf(e.target);
     var destinationPosition = -(newIndex * this.IMAGE_WIDTH)
+    if(this.sliderType === 'vertical'){
+      destinationPosition = -(newIndex * this.IMAGE_HEIGHT)
+      wrapperPosition = this.wrapper.getTopPosition()
+    }
 
     this.indicator.setCurrentIndex(newIndex);
     var anim = setInterval((function(){
         if(wrapperPosition != destinationPosition){
           this.leftSideBtn.disableBtn()
           this.rightSideBtn.disableBtn()
+          this.allowTransition(false)
           if(wrapperPosition < destinationPosition){
               wrapperPosition = wrapperPosition + CHANGE_SPEED
             }
           else{
             wrapperPosition = wrapperPosition - CHANGE_SPEED
           }
-          this.wrapper.setLeftPosition(wrapperPosition)
+          if(this.sliderType === 'vertical'){
+            this.wrapper.setTopPosition(wrapperPosition)
+          }else{
+            this.wrapper.setLeftPosition(wrapperPosition)
+          }
+
         }else{
           this.leftSideBtn.enableBtn()
           this.rightSideBtn.enableBtn()
+          this.allowTransition(true)
           clearInterval(anim)
         }
     }).bind(this), CHANGE_SPEED)
@@ -399,8 +415,6 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
       if(this.indicator.getCurrentIndex() >= this.sliderImages.length ||
       currentPosition < updatePosition){
           updatePosition = 0
-          this.indicator.setCurrentIndex(0);
-
           var sliderAnim = setInterval((function(){
 
             console.log(currentPosition , ' , ', updatePosition)
@@ -416,6 +430,7 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
             }else{
               this.leftSideBtn.enableBtn()
               this.rightSideBtn.enableBtn()
+              this.indicator.setCurrentIndex(0)
               this.allowTransition(true)
               clearInterval(sliderAnim)
             }
@@ -424,9 +439,14 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
 
       else{
         var sliderAnim = setInterval((function(){
-          console.log(currentPosition , ' ,,, ', updatePosition, ' ,,, ', this.wrapper.getRightPosition())
+          // console.log(currentPosition , ' ,,, ', updatePosition, ' ,,, ', this.wrapper.getRightPosition(), ' ,,, ', this.indicator.getCurrentIndex)())
           if(currentPosition !== updatePosition){
-            currentPosition = currentPosition - CHANGE_SPEED
+            if(currentPosition > updatePosition){
+              currentPosition = currentPosition - CHANGE_SPEED
+            }
+            else{
+              currentPosition = currentPosition + CHANGE_SPEED
+            }
             this.wrapper.setLeftPosition(currentPosition)
           }else{
             this.indicator.setCurrentIndex(-currentPosition/IMAGE_WIDTH);
@@ -478,8 +498,11 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
         else{
           var sliderAnim = setInterval((function(){
             if(currentPosition !== updatePosition){
-              currentPosition = currentPosition - CHANGE_SPEED
-
+              if(currentPosition > updatePosition){
+                  currentPosition = currentPosition - CHANGE_SPEED
+              }else{
+                currentPosition = currentPosition + CHANGE_SPEED
+              }
               this.wrapper.setTopPosition(currentPosition )
             }else{
               this.indicator.setCurrentIndex(-currentPosition/this.IMAGE_HEIGHT);
@@ -592,16 +615,17 @@ function SliderController(carouselElement, intervalDuration, IMAGE_WIDTH, IMAGE_
 var carouselFirstSlide = document.getElementsByClassName('carousel')[0];
 var slider1Controller = new SliderController(carouselFirstSlide, WAIT_MILLI, SLIDER_1_IMAGE_WIDTH, SLIDER_1_IMAGE_HEIGHT)
 slider1Controller.setBtnsElement('slider_1_left_btn','slider_1_right_btn')
+slider1Controller.setSliderType('vertical')
 slider1Controller.setIndicatorElement('slider-indicator')
 slider1Controller.setIndicatorClass("far fa-square", "fas fa-square")
-slider1Controller.setSliderType('vertical')
+
 slider1Controller.setActionListeners();
 slider1Controller.startTransition(TRANSITION_DURATION)
 
 var carouselSecondSlide = document.getElementsByClassName('carousel')[1];
 var slider2Controller = new SliderController(carouselSecondSlide, WAIT_MILLI, SLIDER_2_IMAGE_WIDTH, SLIDER_2_IMAGE_HEIGHT)
-slider2Controller.setBtnsElement('slide_2_left-slider-btn','slide_2_right-slider-btn')
 slider2Controller.setSliderType('horizontal')
+slider2Controller.setBtnsElement('slide_2_left-slider-btn','slide_2_right-slider-btn')
 slider2Controller.setDefaultIndicator();
 slider2Controller.setActionListeners();
 slider2Controller.startTransition(TRANSITION_DURATION)
