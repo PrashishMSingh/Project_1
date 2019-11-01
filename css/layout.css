@@ -46,6 +46,12 @@ header .left-wrapper{
   background-color: #3c3c3c;
 }
 
+img, video{
+  width : 100%;
+  height : 100%
+
+}
+
 .left-wrapper{
   float: left;
 }
